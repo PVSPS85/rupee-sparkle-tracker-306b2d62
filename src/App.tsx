@@ -13,6 +13,7 @@ import Signup from "./pages/auth/Signup";
 import Dashboard from "./pages/Dashboard";
 import Transactions from "./pages/Transactions";
 import Budgets from "./pages/Budgets";
+import Learning from "./pages/Learning";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 
@@ -78,6 +79,11 @@ const App = () => (
           <Route path="/budgets" element={
             <ProtectedRoute>
               <Budgets />
+            </ProtectedRoute>
+          } />
+          <Route path="/learning" element={
+            <ProtectedRoute>
+              <Learning />
             </ProtectedRoute>
           } />
           <Route path="/settings" element={
