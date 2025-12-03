@@ -7,6 +7,7 @@ import { BalanceCard } from '@/components/dashboard/BalanceCard';
 import { SpendingChart } from '@/components/dashboard/SpendingChart';
 import { RecentTransactions } from '@/components/dashboard/RecentTransactions';
 import { BudgetProgress } from '@/components/dashboard/BudgetProgress';
+import { LearningHub } from '@/components/dashboard/LearningHub';
 import { AddTransactionModal } from '@/components/transactions/AddTransactionModal';
 import { Button } from '@/components/ui/button';
 import CanvasParticles from '@/components/CanvasParticles';
@@ -56,6 +57,11 @@ export default function Dashboard() {
                 </Button>
               </motion.div>
             </div>
+
+            {/* Learning Hub */}
+            <section className="mb-8">
+              <LearningHub />
+            </section>
 
             {/* Balance Cards */}
             <section className="mb-8">
