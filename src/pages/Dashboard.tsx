@@ -11,6 +11,7 @@ import { AddTransactionModal } from '@/components/transactions/AddTransactionMod
 import { Button } from '@/components/ui/button';
 import CanvasParticles from '@/components/CanvasParticles';
 import ScreenPets from '@/components/ScreenPets';
+import ChatBot from '@/components/ChatBot';
 import { useAppStore } from '@/lib/store';
 
 export default function Dashboard() {
@@ -81,6 +82,9 @@ export default function Dashboard() {
         isOpen={isAddModalOpen} 
         onClose={() => setIsAddModalOpen(false)} 
       />
+
+      {/* AI Chatbot */}
+      <ChatBot />
     </div>
   );
 }
