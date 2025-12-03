@@ -7,7 +7,8 @@ import {
   Settings, 
   LogOut,
   Menu,
-  X
+  X,
+  GraduationCap
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useAppStore } from '@/lib/store';
@@ -18,6 +19,7 @@ const navItems = [
   { path: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
   { path: '/transactions', label: 'Transactions', icon: ArrowRightLeft },
   { path: '/budgets', label: 'Budgets', icon: PiggyBank },
+  { path: '/learning', label: 'Learning', icon: GraduationCap },
   { path: '/settings', label: 'Settings', icon: Settings },
 ];
 
