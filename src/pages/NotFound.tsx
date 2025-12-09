@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Home, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import ShootingStars from "@/components/ShootingStars";
+import CanvasParticles from "@/components/CanvasParticles";
 import { useAppStore } from "@/lib/store";
 
 const NotFound = () => {
@@ -16,7 +16,7 @@ const NotFound = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center relative">
-      <ShootingStars enabled={settings.particlesEnabled} starCount={6} />
+      <CanvasParticles enabled={settings.particlesEnabled} particleCount={30} />
       
       <motion.div 
         initial={{ opacity: 0, y: 20 }}

@@ -11,7 +11,7 @@ import { SafeToSpend } from '@/components/dashboard/SafeToSpend';
 import { SavingsGoals } from '@/components/dashboard/SavingsGoals';
 import { AddTransactionModal } from '@/components/transactions/AddTransactionModal';
 import { Button } from '@/components/ui/button';
-import ShootingStars from '@/components/ShootingStars';
+import CanvasParticles from '@/components/CanvasParticles';
 import { useAppStore } from '@/lib/store';
 
 export default function Dashboard() {
@@ -20,7 +20,7 @@ export default function Dashboard() {
 
   return (
     <div className="min-h-screen relative">
-      <ShootingStars enabled={settings.particlesEnabled} starCount={8} />
+      <CanvasParticles enabled={settings.particlesEnabled} particleCount={50} />
       <Navbar />
       
       <main className="pt-20 pb-8 px-4">
@@ -47,6 +47,7 @@ export default function Dashboard() {
                 transition={{ duration: 0.4 }}
               >
                 <Button
+                  variant="neon"
                   onClick={() => setIsAddModalOpen(true)}
                   className="w-full sm:w-auto"
                 >
