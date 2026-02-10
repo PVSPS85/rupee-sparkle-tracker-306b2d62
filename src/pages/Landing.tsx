@@ -56,7 +56,7 @@ export default function Landing() {
             <Link to="/auth/login">
               <Button variant="ghost">Login</Button>
             </Link>
-            <Link to="/auth/login">
+            <Link to="/auth/signup">
               <Button variant="neon">Get Started</Button>
             </Link>
           </div>
@@ -105,7 +105,7 @@ export default function Landing() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Link to="/auth/login">
+            <Link to="/auth/signup">
               <Button variant="neon" size="xl" className="w-full sm:w-auto">
                 Start Free
                 <ArrowRight className="w-5 h-5 ml-1" />
@@ -122,6 +122,27 @@ export default function Landing() {
           </motion.div>
         </div>
 
+        {/* Stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
+        >
+          {[
+            { value: '10K+', label: 'Active Users' },
+            { value: '₹50Cr+', label: 'Tracked' },
+            { value: '99.9%', label: 'Uptime' },
+            { value: '4.9★', label: 'Rating' },
+          ].map((stat, index) => (
+            <div key={stat.label} className="text-center">
+              <p className="font-display text-3xl md:text-4xl font-bold text-glow-cyan mb-1">
+                {stat.value}
+              </p>
+              <p className="text-sm text-muted-foreground">{stat.label}</p>
+            </div>
+          ))}
+        </motion.div>
       </section>
 
       {/* Features Section */}
@@ -182,7 +203,7 @@ export default function Landing() {
             <p className="text-muted-foreground mb-8 max-w-md mx-auto">
               Join thousands of users who are already saving smarter with Simple Budget Tracker.
             </p>
-            <Link to="/auth/login">
+            <Link to="/auth/signup">
               <Button variant="neon" size="xl">
                 Get Started Free
                 <ArrowRight className="w-5 h-5 ml-1" />
