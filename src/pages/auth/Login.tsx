@@ -35,6 +35,7 @@ export default function Login() {
         email,
         options: {
           shouldCreateUser: true,
+          emailRedirectTo: undefined,
         },
       });
 
