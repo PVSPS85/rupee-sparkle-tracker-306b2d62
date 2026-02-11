@@ -122,27 +122,6 @@ export default function Landing() {
           </motion.div>
         </div>
 
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
-        >
-          {[
-            { value: '10K+', label: 'Active Users' },
-            { value: '₹50Cr+', label: 'Tracked' },
-            { value: '99.9%', label: 'Uptime' },
-            { value: '4.9★', label: 'Rating' },
-          ].map((stat, index) => (
-            <div key={stat.label} className="text-center">
-              <p className="font-display text-3xl md:text-4xl font-bold text-glow-cyan mb-1">
-                {stat.value}
-              </p>
-              <p className="text-sm text-muted-foreground">{stat.label}</p>
-            </div>
-          ))}
-        </motion.div>
       </section>
 
       {/* Features Section */}
