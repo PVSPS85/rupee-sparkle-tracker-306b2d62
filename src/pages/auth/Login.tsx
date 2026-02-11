@@ -164,31 +164,6 @@ export default function Login() {
             ))}
           </motion.div>
 
-          {/* Stats */}
-          <motion.div 
-            className="flex gap-8 pt-8 border-t border-white/10"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.8 }}
-          >
-            {[
-              { value: '50K+', label: 'Active Users' },
-              { value: '₹2Cr+', label: 'Tracked' },
-              { value: '4.9★', label: 'Rating' },
-            ].map((stat, index) => (
-              <motion.div 
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.9 + index * 0.1 }}
-              >
-                <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan to-neon-green">
-                  {stat.value}
-                </div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </motion.div>
-            ))}
-          </motion.div>
         </div>
       </motion.div>
 
